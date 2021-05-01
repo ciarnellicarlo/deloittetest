@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <navbar />
-    <div class="content">
-      <slider />
-      <div class="blog">
-        blog part 
+    <div class="row no-gutters">
+      <navbar class="col-md-2 col-sm-12"/>
+      <div class="content col-md-10 col-sm-12">
+        <slider class="slider" />
+        <div class="blog">
+          blog part
+        </div>
       </div>
     </div>
   </div>
@@ -25,5 +27,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>

@@ -36,5 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+img {
+    max-height: 350px;
+    object-fit: cover;
+}
 </style>
