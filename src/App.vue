@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="row no-gutters">
-      <navbar class="col-md-2 col-sm-12"/>
-      <div class="content col-md-10 col-sm-12">
+    <div class="papi row no-gutters">
+      <navbar class="navbar col-md-2 col-sm-12"/>
+      <div class="blogslider content col-md-10 col-sm-12">
         <slider class="slider" />
         <blog class="blog" />
       </div>
@@ -27,4 +27,15 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.papi {
+  height: 100%;
+}
 </style>

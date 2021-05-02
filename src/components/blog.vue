@@ -17,13 +17,13 @@
             facilis placeat repellat provident est illum quisquam debitis nobis consectetur.
         </p>
 
-        <div class="col-md-6 row">
-            <figure class="col-md-6 row"> 
-                <img class="col-md-12" src="@/assets/slider1.jpg" 
+        <div class="col-md-6">
+            <figure> 
+                <img src="@/assets/image4.jpg" 
                 alt="">
-                <figcaption class="col-md-12">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
+                <figcaption>Lorem, ipsum dolor.</figcaption>
             </figure>
-            <p class="col-md-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
             Commodi, adipisci nesciunt voluptates ad corrupti in recusandae harum! Asperiores ullam amet,
             facilis placeat repellat provident est illum quisquam debitis nobis consectetur.</p>
         </div>
@@ -44,15 +44,24 @@ export default {
 
 <style scoped lang="scss">
     article {
-        margin-top: 30px;
+        height: 60vh;
+        overflow-y: auto;
+        margin: auto;
     }
 
     header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        margin-top: 30px;
     }
 
     figure img {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    figure {
+        float: left;
     }
 </style>
