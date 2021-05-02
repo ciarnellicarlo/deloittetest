@@ -1,10 +1,10 @@
 <template>
-    <div class="navbar">
+    <nav class="navbar">
         <img class="logo" src="@/assets/logo.png">
         <button type="button" class="btn btn-light">Log In</button>
         <button type="button" class="btn btn-light">Register</button>
-        <div class="footer">© Carlo Ciarnelli 2021</div>
-    </div>
+        <footer>© Carlo Ciarnelli 2021</footer>
+    </nav>
 </template>
 
 <script>
@@ -23,11 +23,11 @@ export default {
         justify-content: flex-start;
         position: relative;
         text-align: center;
-    }
 
-    .navbar > * {
-        margin: 10px;
-        width: 80%;
+        * {
+            margin: 10px;
+            width: 80%;
+        }
     }
 
     .logo {
@@ -35,8 +35,8 @@ export default {
         background-color: black;
     }
 
-    .footer {
-        position: absolute;
+    footer {
+        position: sticky;
         top: 90vh;
     }
 </style>
