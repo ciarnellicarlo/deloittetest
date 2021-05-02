@@ -3,7 +3,7 @@
         <img class="logo" src="@/assets/logo.png">
         <button type="button" class="btn btn-light">Log In</button>
         <button type="button" class="btn btn-light">Register</button>
-        <div class="footer">footer example</div>
+        <div class="footer">© Carlo Ciarnelli 2021</div>
     </div>
 </template>
 

@@ -4,9 +4,7 @@
       <navbar class="col-md-2 col-sm-12"/>
       <div class="content col-md-10 col-sm-12">
         <slider class="slider" />
-        <div class="blog">
-          blog part
-        </div>
+        <blog class="blog" />
       </div>
     </div>
   </div>
@@ -16,12 +14,14 @@
 
 import navbar from './components/navbar.vue';
 import slider from './components/slider.vue';
+import blog from './components/blog.vue';
 
 export default {
   name: 'DeloitteTask',
   components: {
     navbar,
-    slider
+    slider,
+    blog
   }
 }
 </script>
