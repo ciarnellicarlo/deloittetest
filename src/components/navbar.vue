@@ -1,8 +1,8 @@
 <template>
     <div class="navbar">
-        <div class="logo">logo</div>
-        <div class="login">login</div>
-        <div class="register">register</div>
+        <img class="logo" src="@/assets/logo.png">
+        <button type="button" class="btn btn-light">Log In</button>
+        <button type="button" class="btn btn-light">Register</button>
         <div class="footer">footer example</div>
     </div>
 </template>
@@ -22,10 +22,21 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         position: relative;
+        text-align: center;
+    }
+
+    .navbar > * {
+        margin: 10px;
+        width: 80%;
+    }
+
+    .logo {
+        margin-top: 30px;
+        background-color: black;
     }
 
     .footer {
         position: absolute;
-        top: 92vh;
+        top: 90vh;
     }
 </style>
