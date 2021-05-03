@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar">
         <img class="logo" src="@/assets/logo.png">
-        <button type="button" class="login btn btn-light">Log In</button>
-        <button type="button" class="register btn btn-light">Register</button>
+        <button type="button" class="login btn btn-light"><font-awesome-icon icon="user"/>Log In</button>
+        <button type="button" class="register btn btn-light"><font-awesome-icon icon="user-edit"/>Register</button>
         <footer>© Carlo Ciarnelli 2021</footer>
     </nav>
 </template>
@@ -30,6 +30,10 @@ export default {
         }
     }
 
+    button {
+        position: relative;
+    }
+
     .logo {
         margin-top: 30px;
         background-color: black;
@@ -38,6 +42,12 @@ export default {
     .login {
         background-color: #86BC25;
         border: none;
+    }
+
+    .fa-user-edit, .fa-user {
+        position: absolute;
+        left: -33%;
+        top: 0;
     }
 
     .register {
