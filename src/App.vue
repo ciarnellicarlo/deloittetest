@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="papi row no-gutters">
-      <navbar class="navbar col-md-2 col-sm-12"/>
-      <div class="blogslider content col-md-10 col-sm-12">
+    <div class="row no-gutters">
+      <navbar class="col-lg-2 col-md-12"/>
+      <div class="blogslider content col-lg-10 col-md-12">
         <slider class="slider" />
         <blog class="blog" />
       </div>
@@ -35,7 +35,7 @@ html, body {
   height: 100%;
 }
 
-.papi {
+.no-gutters {
   height: 100%;
 }
 </style>
