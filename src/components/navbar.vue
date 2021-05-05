@@ -28,80 +28,85 @@ export default {
     .navbar-custom {
         background-color: black;
         flex-direction: column;
+
+        .navbar-brand {
+            width: 80%;
+            margin: 30px 0 0 0 ;
+        }
+
+        .navbar-toggler {
+            margin-right: 12px;
+        }
+
+        .navbar-collapse {
+            flex-direction: column;
+            width: 80%;
+
+            .navbar-nav {
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .nav-item:nth-last-of-type(1) {
+                        background-color: #43B02A;
+                }
+
+                .nav-item {
+                    width: 100%;
+                    text-align: center;
+                    background-color: #86BC25;
+                    margin: 5px;
+                    border-radius: 5px;
+                    transition: background-color 0.2s ease;
+
+                    &:hover {
+                        background-color: white;
+                    
+                    }
+
+                    a {
+                        color: black!important;
+                        transition: color 0.2s ease;
+                    }
+                }
+            }
+        }
     }
 
-    .navbar-brand {
-        width: 80%;
-        margin: 30px 0 0 0 ;
-    }
-
-    .navbar-collapse {
-        width: 80%;
-        flex-direction: column;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
     
-    .nav-item {
-        width: 100%;
-        text-align: center;
-        background-color: #86BC25;
-        margin: 5px;
-        border-radius: 5px;
-        transition: background-color 0.2s ease;
-    }
 
-    .nav-item:nth-last-of-type(1) {
-        background-color: #43B02A;
-    }
+    
 
-    .nav-item:hover {
-        background-color: white;
-    }
-
-    .nav-item a {
-        color: black!important;
-        transition: color 0.2s ease;
-    }
-
-    .navbar-toggler {
-        margin-right: 12px;
-    }
+    
 
     @media (max-width: 991.98px) {
         .navbar-custom {
             flex-direction: row;
-        }
 
-        .navbar-collapse {
-            flex-direction: row;
-            justify-content: flex-end;
-        }
+            .navbar-brand {
+                width: 200px;
+                margin: 0;
+            }
 
-        .navbar-nav {
-            flex-direction: row;
-            justify-content: center;
-            width: 60%;
-        }
+            .navbar-collapse {
+                flex-direction: row;
+                justify-content: flex-end;
 
-        .nav-item {
-            width: 40%;
-        }
+                .navbar-nav {
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 60%;
 
-        .navbar-brand {
-            width: 200px;
-            margin: 0;
+                    .nav-item {
+                        width: 40%;
+                    }
+                }
+            }
         }
     }
 
     @media (max-width: 767.98px) {
         .navbar-nav {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
         }
     }
 </style>
