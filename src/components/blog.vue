@@ -46,7 +46,7 @@ export default {
     article {
         height: 60vh;
         margin: auto;
-        padding-bottom: 32px;
+        padding-bottom: 36px;
         line-height: 1.8rem;
     }
 

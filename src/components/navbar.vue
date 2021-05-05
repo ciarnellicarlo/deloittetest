@@ -8,12 +8,52 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><font-awesome-icon icon="user"/> Login</a>
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Login"><font-awesome-icon icon="user"/> Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><font-awesome-icon icon="user-edit"/> Register</a>
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Registration"><font-awesome-icon icon="user-edit"/> Register</a>
                 </li>
             </ul>
+        </div>
+
+        <div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    AAAA
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 </template>
@@ -98,7 +138,7 @@ export default {
                     width: 60%;
 
                     .nav-item {
-                        width: 40%;
+                        width: 50%;
                     }
                 }
             }
@@ -107,6 +147,8 @@ export default {
 
     @media (max-width: 767.98px) {
         .navbar-nav {
+            display: block;
+            margin-left: 20px;
         }
     }
 </style>

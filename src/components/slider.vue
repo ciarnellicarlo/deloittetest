@@ -1,6 +1,11 @@
 <template>
     <div>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+                <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="@/assets/slider1.jpg" alt="First slide">
