@@ -15,7 +15,7 @@ export default {
 
 <style scoped lang="scss">
     footer {
-        position: sticky;
+        position: fixed;
         bottom: 0;
         display: flex;
         align-items: center;

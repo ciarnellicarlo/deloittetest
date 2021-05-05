@@ -1,8 +1,8 @@
 <template>
     <article class="container row">
         <header class ="col-md-12">
-            <h1>Title</h1>
-            <p class="date">Date</p>
+            <h1>Welcome to Deloitte!</h1>
+            <p class="date">Thursday, 6th May 2021</p>
         </header>
 
         <p class="col-md-6">
@@ -19,7 +19,7 @@
 
         <div class="col-md-6">
             <figure> 
-                <img src="@/assets/image4.jpg" 
+                <img src="@/assets/chairperson.jpg" 
                 alt="">
                 <figcaption>Lorem, ipsum dolor.</figcaption>
             </figure>
@@ -45,8 +45,9 @@ export default {
 <style scoped lang="scss">
     article {
         height: 60vh;
-        overflow-y: auto;
         margin: auto;
+        padding-bottom: 32px;
+        line-height: 1.8rem;
     }
 
     header {
@@ -63,5 +64,11 @@ export default {
 
     figure {
         float: left;
+    }
+
+    @media (max-width: 991.98px) {
+        article {
+            height: 100%;
+        }
     }
 </style>

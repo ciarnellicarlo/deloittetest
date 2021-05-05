@@ -30,8 +30,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html, body {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 #app {
@@ -41,4 +44,14 @@ html, body {
 .no-gutters {
   height: 100%;
 }
+
+.blogslider {
+  overflow-y: scroll;
+}
+
+@media (max-width: 991.98px) {
+        .blogslider {
+            overflow-y: initial;
+        }
+    }
 </style>
