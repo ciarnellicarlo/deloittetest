@@ -20,7 +20,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Welcome back!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -38,7 +38,7 @@
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
-                            <button type="submit" class="btn btn-dark">Submit</button>
+                            <button type="submit" class="btn btn-dark">Login</button>
                         </form>
                     </div>
                 </div>
@@ -46,20 +46,53 @@
         </div>
 
         <div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Join us</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                    AAAA
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="modal-body row">
+                        <div class="loginpicture col-md-6">
+                            <img src="@/assets/login3.jpg" alt="">
+                        </div>
+                        <form class="col-md-6">
+                            <div class="form-group">
+                                <label for="InputName1">Name</label>
+                                <input type="name" class="form-control" id="InputName1" aria-describedby="nameHelp" placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputSurname1">Surname</label>
+                                <input type="name" class="form-control" id="InputSurname1" aria-describedby="surnameHelp" placeholder="Enter Surname">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Mobile</label>
+                                <input type="tel" class="form-control" id="InputMobile1" aria-describedby="mobileHelp" placeholder="+356 xx123456">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Birthday</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Birthday">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Username</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Address</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Address">
+                            </div>
+                            <button type="submit" class="btn btn-dark">Register</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -136,7 +169,6 @@ export default {
     }
 
     .loginpicture {
-        height: 80vh;
         overflow: hidden;
     }
 
@@ -154,9 +186,7 @@ export default {
         }
     }
     
-    .modal-content {
-        max-height: 710px;
-    }
+    
 
     @media (max-width: 991.98px) {
         .navbar-custom {
