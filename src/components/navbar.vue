@@ -116,10 +116,46 @@ export default {
                     a {
                         color: black!important;
                         transition: color 0.2s ease;
+                        position: relative;
+
+                        .fa-user {
+                            position: absolute;
+                            right: 83%;
+                            top: 33%;
+                        }
+
+                        .fa-user-edit {
+                            position: absolute;
+                            right: 80%;
+                            top: 33%;
+                        }
                     }
                 }
             }
         }
+    }
+
+    .loginpicture {
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 630px;
+
+        .btn {
+            background-color: #86BC25;
+            border: none;
+            align-self: flex-end;
+            width: 30%;
+        }
+    }
+    
+    .modal-content {
+        max-height: 710px;
     }
 
     @media (max-width: 991.98px) {
@@ -137,35 +173,20 @@ export default {
 
                 .navbar-nav {
                     flex-direction: row;
-                    justify-content: center;
-                    width: 60%;
+                    justify-content: flex-end;
+                    width: 80%;
 
                     .nav-item {
-                        width: 50%;
+                        width: 40%;
+                        margin-right: 12px;
                     }
                 }
             }
         }
     }
 
-    .loginpicture {
-        height: 80vh;
-        overflow: hidden;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .btn {
-        background-color: #86BC25;
-        border: none;
-        align-self: flex-end;
-        width: 30%;
-    }
-
+    
+    
     @media (max-width: 767.98px) {
         .navbar-nav {
             display: block;
@@ -176,4 +197,5 @@ export default {
             display: none;
         }
     }
+
 </style>
