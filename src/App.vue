@@ -6,6 +6,7 @@
         <slider class="slider" />
         <blog class="blog" />
       </div>
+      <ftr class="col-lg-2 col-md-12"/>
     </div>
   </div>
 </template>
@@ -15,13 +16,15 @@
 import navbar from './components/navbar.vue';
 import slider from './components/slider.vue';
 import blog from './components/blog.vue';
+import ftr from './components/ftr.vue';
 
 export default {
   name: 'DeloitteTask',
   components: {
     navbar,
     slider,
-    blog
+    blog,
+    ftr
   }
 }
 </script>

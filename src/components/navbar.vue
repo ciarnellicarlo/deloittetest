@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><font-awesome-icon icon="user" /> Login</a>
+                    <a class="nav-link" href="#"><font-awesome-icon icon="user"/> Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><font-awesome-icon icon="user-edit" /> Register</a>
+                    <a class="nav-link" href="#"><font-awesome-icon icon="user-edit"/> Register</a>
                 </li>
             </ul>
         </div>
@@ -32,7 +32,7 @@ export default {
 
     .navbar-brand {
         width: 80%;
-        margin: 40px 0;
+        margin: 30px 0 0 0 ;
     }
 
     .navbar-collapse {
