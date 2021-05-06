@@ -56,7 +56,7 @@
                     </div>
                     <div class="modal-body row">
                         <div class="loginpicture col-md-6">
-                            <img src="@/assets/login3.jpg" alt="">
+                            <img src="@/assets/register.jpg" alt="">
                         </div>
                         <form class="col-md-6">
                             <div class="form-group">
@@ -176,7 +176,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-height: 630px;
+        max-height: 850px;
 
         .btn {
             background-color: #86BC25;
