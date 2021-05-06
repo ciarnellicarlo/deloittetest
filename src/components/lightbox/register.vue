@@ -81,6 +81,11 @@ export default {
             if (now > today) {
                 alert("Your birthday is in the future")
             }
+            var str = this.password;	// your password field's value goes here
+            var re = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
+            if (re.test(str) == false) {
+                alert("Password needs to contain at least 8 characters, 1 capital letter, 1 small character, 1 digit and 1 special character (!@#$%^&*)")
+            }
         }
     }
 }
