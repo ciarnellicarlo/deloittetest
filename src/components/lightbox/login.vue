@@ -42,7 +42,27 @@ export default {
 
     methods: {
         login() {
-            console.log(this.username, this.password);
+            let account = {
+                username: this.username,
+                password: this.password
+            }
+
+            let accounts = JSON.parse(localStorage.getItem('accounts'));
+
+            let loggedin = false;
+
+            for (let i = 0; i < accounts.length ; i++) {
+                if (accounts[i].username === account.username && accounts[i].password === account.password) {
+                    loggedin = true;
+                    break;
+                }
+            }
+
+            if ( loggedin ) {
+                alert('you are now logged in')
+            } else {
+                alert('username or password is incorrect')
+            }
         }
     }
 }
