@@ -90,7 +90,6 @@ export default {
             }
 
             else {
-                alert("You have successfuly registered. Try logging in")
                 this.saveData()
             }
         },
@@ -108,14 +107,23 @@ export default {
                     address: this.address
                 }
 
-            if(localStorage.getItem('accounts') === null) {
+            if (localStorage.getItem('accounts') === null) {
                 let accounts = [];
                 accounts.push(account);
                 localStorage.setItem('accounts', JSON.stringify(accounts));
-            } else {
+            }
+            else {
                 let accounts = JSON.parse(localStorage.getItem('accounts'));
-                accounts.push(account);
-                localStorage.setItem('accounts', JSON.stringify(accounts));
+                console.log(accounts);
+                for (let i = 0; i < accounts.length ; i++) {
+                    if (accounts[i].username === account.username) {
+                        alert("You already have an account. Please try to log in.")
+                    } else {
+                        accounts.push(account);
+                        localStorage.setItem('accounts', JSON.stringify(accounts));
+                        alert("You have successfully registered. You can now login.")
+                    }
+                }
             }
         }
     }
