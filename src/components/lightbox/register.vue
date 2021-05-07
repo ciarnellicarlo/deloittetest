@@ -10,7 +10,7 @@
                         </button>
                     </div>
                     <div class="modal-body row">
-                        <div class="loginpicture col-md-6">
+                        <div class="lightboxpicture col-md-6">
                             <img src="@/assets/register.jpg" alt="">
                         </div>
                         <form class="col-md-6" v-on:submit.prevent="onSubmit">
@@ -111,19 +111,25 @@ export default {
                 let accounts = [];
                 accounts.push(account);
                 localStorage.setItem('accounts', JSON.stringify(accounts));
+                alert("You have successfully registered. You can now login.");
             }
             else {
                 let accounts = JSON.parse(localStorage.getItem('accounts'));
                 console.log(accounts);
+                let found = false;
                 for (let i = 0; i < accounts.length ; i++) {
                     if (accounts[i].username === account.username) {
-                        alert("You already have an account. Please try to log in.")
-                    } else {
-                        accounts.push(account);
-                        localStorage.setItem('accounts', JSON.stringify(accounts));
-                        alert("You have successfully registered. You can now login.")
+                        found = true;
+                        break;
                     }
                 }
+
+                if ( found ) {
+                    alert("This username is already in use. Please try another.");
+                } else {
+                        accounts.push(account);
+                        localStorage.setItem('accounts', JSON.stringify(accounts));
+                    }
             }
         }
     }
@@ -131,7 +137,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .loginpicture {
+    .lightboxpicture {
         overflow: hidden;
     }
 
@@ -150,7 +156,7 @@ export default {
     }
 
     @media (max-width: 767.98px) {
-        .loginpicture {
+        .lightboxpicture {
             display: none;
         }
     }
