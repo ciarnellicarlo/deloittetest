@@ -73,18 +73,49 @@ export default {
 
     methods: {
         onSubmit() {
+            var today = new Date()
+            var now = new Date(this.birthday);
+            var str = this.password;	// your password field's value goes here
+            var re = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
             if (this.tel.length !== 13) {
                 alert("Mobile number must be 13 digits long. Please try again")
             } 
-            var today = new Date()
-            var now = new Date(this.birthday);
-            if (now > today) {
+            
+            else if (now > today) {
                 alert("Your birthday is in the future")
             }
-            var str = this.password;	// your password field's value goes here
-            var re = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
-            if (re.test(str) == false) {
+            
+            else if (re.test(str) == false) {
                 alert("Password needs to contain at least 8 characters, 1 capital letter, 1 small character, 1 digit and 1 special character (!@#$%^&*)")
+            }
+
+            else {
+                alert("You have successfuly registered. Try logging in")
+                this.saveData()
+            }
+        },
+
+        saveData() {
+
+            let account = {
+                    name: this.name,
+                    surname: this.surname,
+                    tel: this.tel,
+                    email: this.email,
+                    birthday: this.birthday,
+                    password: this.password,
+                    username: this.username,
+                    address: this.address
+                }
+
+            if(localStorage.getItem('accounts') === null) {
+                let accounts = [];
+                accounts.push(account);
+                localStorage.setItem('accounts', JSON.stringify(accounts));
+            } else {
+                let accounts = JSON.parse(localStorage.getItem('accounts'));
+                accounts.push(account);
+                localStorage.setItem('accounts', JSON.stringify(accounts));
             }
         }
     }

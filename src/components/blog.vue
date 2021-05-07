@@ -2,7 +2,7 @@
     <article class="container row">
         <header class ="col-md-12">
             <h1>Welcome to Deloitte!</h1>
-            <p class="date">Thursday, 6th May 2021</p>
+            <small class="date">Thursday, 6th May 2021</small>
         </header>
 
         <p class="col-md-6">
