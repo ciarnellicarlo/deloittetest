@@ -13,7 +13,7 @@
                         <div class="lightboxpicture col-md-6">
                             <img src="@/assets/register.jpg" alt="">
                         </div>
-                        <form class="col-md-6" v-on:submit.prevent="onSubmit">
+                        <form class="col-md-6" v-on:submit.prevent="registration">
                             <div class="form-group">
                                 <label for="InputName1">Name</label>
                                 <input type="text" class="form-control" id="InputName1" aria-describedby="nameHelp" placeholder="Enter name" v-model="name" required>
@@ -72,7 +72,7 @@ export default {
     },
 
     methods: {
-        onSubmit() {
+        registration() {
             var today = new Date()
             var now = new Date(this.birthday);
             var str = this.password;	// your password field's value goes here
@@ -129,6 +129,7 @@ export default {
                 } else {
                         accounts.push(account);
                         localStorage.setItem('accounts', JSON.stringify(accounts));
+                        alert("You have successfully registered. You can now login.");
                     }
             }
         }

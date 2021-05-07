@@ -12,14 +12,14 @@
                         <div class="loginpicture col-md-6">
                             <img src="@/assets/login3.jpg" alt="">
                         </div>
-                        <form class="col-md-6">
+                        <form class="col-md-6" v-on:submit.prevent="login">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Username</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                                <label for="InputName1">Username</label>
+                                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" required v-model="username">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <label for="InputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required v-model="password">
                             </div>
                             <button type="submit" class="btn btn-dark">Login</button>
                         </form>
@@ -31,7 +31,20 @@
 
 <script>
 export default {
-    name: 'login'
+    name: 'login',
+
+    data() {
+        return {
+            username: '',
+            password: ''
+        }
+    },
+
+    methods: {
+        login() {
+            console.log(this.username, this.password);
+        }
+    }
 }
 </script>
 
