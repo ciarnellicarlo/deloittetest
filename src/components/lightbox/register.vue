@@ -13,7 +13,7 @@
                         <div class="lightboxpicture col-md-6">
                             <img src="@/assets/register.jpg" alt="">
                         </div>
-                        <form class="col-md-6" v-on:submit.prevent="registration">
+                        <form class="col-md-6" id="myForm2" v-on:submit.prevent="registration">
                             <div class="form-group">
                                 <label for="InputName1">Name</label><small class="asterisk"> *</small>
                                 <input type="text" class="form-control" id="InputName1" aria-describedby="nameHelp" placeholder="Enter name" v-model="name" required>
@@ -149,6 +149,7 @@ export default {
                         localStorage.setItem('accounts', JSON.stringify(accounts));
                         alert("You have successfully registered. You can now login.");
                         document.getElementById("InputUsername1").classList.remove("is-invalid");
+                        document.getElementById("myForm2").reset();
                     }
             }
         }

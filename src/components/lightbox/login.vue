@@ -12,7 +12,7 @@
                         <div class="loginpicture col-md-6">
                             <img src="@/assets/login3.jpg" alt="">
                         </div>
-                        <form class="col-md-6" v-on:submit.prevent="login">
+                        <form class="col-md-6" id="myForm" v-on:submit.prevent="login">
                             <div class="form-group">
                                 <label for="InputName1">Username</label>
                                 <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" required v-model="username">
@@ -59,7 +59,8 @@ export default {
             }
 
             if ( loggedin ) {
-                alert('you are now logged in')
+                alert('you are now logged in');
+                document.getElementById("myForm").reset();
             } else {
                 alert('username or password is incorrect')
             }
