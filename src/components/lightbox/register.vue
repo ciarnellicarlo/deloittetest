@@ -14,6 +14,7 @@
                             <img src="@/assets/register.jpg" alt="">
                         </div>
                         <form class="col-md-6" id="myForm2" v-on:submit.prevent="registration">
+                            
                             <div class="form-group">
                                 <label for="InputName1">Name</label><small class="asterisk"> *</small>
                                 <input type="text" class="form-control" id="InputName1" aria-describedby="nameHelp" placeholder="Enter name" v-model="name" required>
@@ -58,12 +59,22 @@
                                 <label for="InputAddress1">Address</label>
                                 <input type="text" class="form-control" id="InputAddress1" placeholder="Address" v-model="address">
                             </div>
+                            <div class="alert alert-success" id="alert" role="alert">
+                                You have successfully registered!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div id="alertcontainer">
+            
+                            </div>
                             <button type="submit" class="btn btn-dark">Register</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -85,10 +96,10 @@ export default {
 
     methods: {
         registration() {
-            var today = new Date()
-            var now = new Date(this.birthday);
-            var str = this.password;
-            var re = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
+            let today = new Date()
+            let now = new Date(this.birthday);
+            let str = this.password;
+            let re = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
             if (this.tel.length !== 13) {
                 document.getElementById("InputMobile1").classList.add("is-invalid");
             } 
@@ -135,21 +146,27 @@ export default {
                 let accounts = JSON.parse(localStorage.getItem('accounts'));
                 console.log(accounts);
                 let found = false;
-                for (let i = 0; i < accounts.length ; i++) {
-                    if (accounts[i].username === account.username) {
+
+                accounts.forEach((item) => {
+                    if (item.username === account.username) {
                         found = true;
-                        break;
                     }
-                }
+                });
 
                 if ( found ) {
                     document.getElementById("InputUsername1").classList.add("is-invalid");
                 } else {
                         accounts.push(account);
                         localStorage.setItem('accounts', JSON.stringify(accounts));
-                        alert("You have successfully registered. You can now login.");
                         document.getElementById("InputUsername1").classList.remove("is-invalid");
                         document.getElementById("myForm2").reset();
+                        document.getElementById("alertcontainer").innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>You have successfully registered!</strong> You can try to login now.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>`;
+                        document.getElementById("RegistrationComplete").style.display = "block";
                     }
             }
         }
@@ -160,6 +177,10 @@ export default {
 <style lang="scss" scoped>
     .lightboxpicture {
         overflow: hidden;
+    }
+
+    .alert {
+        display: none;
     }
 
     form {

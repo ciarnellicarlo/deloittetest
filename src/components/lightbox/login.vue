@@ -21,6 +21,7 @@
                                 <label for="InputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required v-model="password">
                             </div>
+                            <div id="alertcontainer2"></div>
                             <button type="submit" class="btn btn-dark">Login</button>
                         </form>
                     </div>
@@ -59,10 +60,22 @@ export default {
             }
 
             if ( loggedin ) {
-                alert('you are now logged in');
-                document.getElementById("myForm").reset();
+                document.getElementById("alertcontainer2").innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>You have successfully Logged in.</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>`;
+                        document.getElementById("LoginComplete").style.display = "block";
+                        document.getElementById("myForm").reset();
             } else {
-                alert('username or password is incorrect')
+                document.getElementById("alertcontainer2").innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Username or password are incorrect.</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>`;
+                            document.getElementById("LoginComplete").style.display = "block";
             }
         }
     }
