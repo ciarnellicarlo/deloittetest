@@ -1,6 +1,6 @@
 # deloittetest
 
-Since this was a frontend test, I decided to use Local storage for the authentification process.
+Since this was a frontend test, I decided to use Local storage for the authentification process instead of a backend.
 
 The framework of choice is Vue, but I made all the authentification process with vanilla JS.
 
